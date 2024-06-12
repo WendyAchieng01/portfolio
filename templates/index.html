@@ -1,0 +1,467 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Index | Wendy</title>
+
+    <link rel="icon" href="#" type="{% static 'images/favicon/w.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon/w.jpg' %}">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <body>
+
+        <div class="loader">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="34px" height="40px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+            </rect>
+            <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+            </rect>
+            <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+            </rect>
+          </svg>
+        </div>
+      
+        <header class="header" id="#top">
+            <div class="logo">
+                <img src="{% static 'images/logo/coding.png' %}" alt="Logo"> Developer
+            </div>
+
+            <nav class="navbar">
+              <a href="{% url 'index' %}">Home</a>
+              <a href="{% url 'about' %}">About Us</a>
+              <a href="{% url 'services' %}">My Services</a>
+              <a href="{% url 'explore' %}">Explore Work</a>
+              <a href="{% url 'contact' %}">Contact Us</a>
+          </nav>
+        </header>
+
+
+        <section class="home reveal">
+            <div class="home-content">
+                <h3>Hello, It's Me</h3>
+                <h1>Wendy Mudenyo</h1>
+                <h3>And I'm a <span class="text"></span></h3>
+                <p>Welcome to my digital playground! I specialize in building dynamic, high-performance websites that bring your ideas to life and drive your business forward.</p>
+    
+                <div class="home-sci">
+                    <a href="https://www.linkedin.com/in/wendy-mudenyo-7b70b9132/"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+                <a href="{% url 'about' %}" class="btn-box">More About Me</a>
+            </div>
+        </section>
+
+
+        <div class="quotation-form">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      {% if messages %}
+                          <div class="messages">
+                              {% for message in messages %}
+                                  <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                              {% endfor %}
+                          </div>
+                      {% endif %}
+  
+                      <form id="quotation-form" name="gq" method="post" role="form" action="{% url 'index' %}">
+                          {% csrf_token %}
+                          <input type="hidden" name="form_type" value="quotation">
+                          <div class="row">
+                              <div class="col-lg-6">
+                                  <fieldset>
+                                      <label for="fullName" class="form-label">Full Name</label>
+                                      <input type="text" name="full_name" class="form-control" placeholder="Enter your full name" autocomplete="on" required>
+                                  </fieldset>
+                              </div>
+                              <div class="col-lg-6">
+                                  <fieldset>
+                                      <label for="emailAddress" class="form-label">Email Address</label>
+                                      <input type="email" name="email_address" class="form-control" placeholder="Enter your email address" autocomplete="on" required>
+                                  </fieldset>
+                              </div>
+                              <div class="col-lg-6">
+                                  <fieldset>
+                                      <label for="projectCategory" class="form-label">Project Category</label>
+                                      <select name="project_category" class="form-select" aria-label="Default select example" id="projectCategory" required>
+                                          <option value="" selected>Choose category</option>
+                                          <option value="Website Development">Website Development</option>
+                                          <option value="E-commerce Site">E-commerce Site</option>
+                                          <option value="Web Application">Web Application</option>
+                                          <option value="UI/UX Design">UI/UX Design</option>
+                                          <option value="Landing Page Design">Landing Page Design</option>
+                                      </select>
+                                  </fieldset>
+                              </div>
+                              <div class="col-lg-6">
+                                  <fieldset>
+                                      <label for="budgetRange" class="form-label">Budget Range (KES)</label>
+                                      <select name="budget_range" class="form-select" aria-label="Default select example" id="budgetRange" required>
+                                          <option value="" selected>Choose budget</option>
+                                          <option value="KES 10,000 - KES 25,000">KES 10,000 - KES 25,000</option>
+                                          <option value="KES 25,000 - KES 50,000">KES 25,000 - KES 50,000</option>
+                                          <option value="KES 50,000 - KES 100,000">KES 50,000 - KES 100,000</option>
+                                          <option value="KES 100,000+">KES 100,000+</option>
+                                      </select>
+                                  </fieldset>
+                              </div>
+                              <div class="col-lg-6">
+                                  <fieldset>
+                                      <label for="projectDescription" class="form-label">Project Description</label>
+                                      <textarea name="project_description" class="form-control" rows="4" placeholder="Describe your project" required></textarea>
+                                  </fieldset>
+                              </div>
+                              <div class="col-lg-6">
+                                  <fieldset>
+                                      <label for="timeline" class="form-label">Expected Timeline</label>
+                                      <input type="text" name="timeline" class="form-control" placeholder="Enter expected timeline" required>
+                                  </fieldset>
+                              </div>
+                              <div class="col-lg-12">
+                                  <fieldset>
+                                      <button type="submit" class="main-button">Get Quotation</button>
+                                  </fieldset>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+          <br><br>
+
+          <section class="services reveal">
+            <div class="services1" id="services">
+                <div class="container">
+                    <h1 class="sub-title">My <span>Services</span></h1>
+                    <div class="services-list">
+                        <div>
+                            <i class="bx bx-code" style="color: #1DEDB9;"></i>
+                            <h2>Responsive Web Design</h2>
+                            <p>Developing websites that adapt seamlessly to different screen sizes and devices. This service ensures that a site looks and functions well on desktops, tablets, and smartphones. By using flexible grid layouts, images, and CSS media queries, front-end developers create a consistent user experience across all devices, enhancing accessibility and user satisfaction.</p>
+                            <a href="#" class="read">Learn More</a>
+                        </div>
+                        <div>
+                            <i class="bx bx-crop" style="color: #1DEDB9;"></i>
+                            <h2>UI/UX Design</h2>
+                            <p>Crafting intuitive and visually appealing user interfaces that enhance user experience (UX). This involves designing layouts, selecting color schemes, and ensuring a seamless interaction flow. By focusing on both the aesthetics and functionality, front-end developers help create interfaces that are not only beautiful but also easy to navigate and use.</p>
+                            <a href="#" class="read">Learn More</a>
+                        </div>
+                        <div>
+                            <i class="bx bxl-apple" style="color: #1DEDB9;"></i>
+                            <h2>Performance Optimization</h2>
+                            <p>Enhancing the speed and efficiency of websites to ensure quick load times and smooth interactions. This involves techniques such as optimizing images, minifying CSS and JavaScript files, leveraging browser caching, and implementing lazy loading.</p>
+                            <a href="#" class="read">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="sub-title">My <span>Skills</span></h1>
+	<section class="skills reveal">
+	<div class="container1" id="Skills">
+		<h1 class="heading1">Technical Skills</h1>
+		<div class="Technical-bars">
+			<div class="bar"><i style="color: #c95d2e;" class='bx bxl-html5'></i>
+				<div class="info">
+					<span>HTML</span>
+				</div>
+				<div class="progress-line html">
+					<span></span>
+				</div>
+			</div>
+			<div class="bar"><i style="color: #147bbc;" class='bx bxl-css3'></i>
+				<div class="info">
+					<span>CSS</span>
+				</div>
+				<div class="progress-line css">
+					<span></span>
+				</div>
+			</div>
+			<div class="bar"><i style="color: #b0bc1e;" class='bx bxl-javascript'></i>
+				<div class="info">
+					<span>Javascript</span>
+				</div>
+				<div class="progress-line javascript">
+					<span></span>
+				</div>
+			</div>
+			<div class="bar"><i style="color: #c32ec9;" class='bx bxl-python'></i>
+				<div class="info">
+					<span>Python</span>
+				</div>
+				<div class="progress-line python">
+					<span></span>
+				</div>
+			</div>
+			<div class="bar"><i style="color: #69bcbc;" class='bx bxl-bootstrap'></i>
+				<div class="info">
+					<span>Bootstrap</span>
+				</div>
+				<div class="progress-line bootstrap">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container1">
+		<h1 class="heading1">Professional Skills</h1>
+		<div class="radial-bars">
+			<div class="radial-bar">
+				<svg x="0px" y="0px" viewBox="0 0 200 200">
+					<circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+					<circle class="path path-1" cx="100" cy="100" r="80"></circle>
+				</svg>
+				<div class="percentage">90%</div>
+				<div class="text">Creativity</div>
+			</div>
+			<div class="radial-bar">
+				<svg x="0px" y="0px" viewBox="0 0 200 200">
+					<circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+					<circle class="path path-2" cx="100" cy="100" r="80"></circle>
+				</svg>
+				<div class="percentage">65%</div>
+				<div class="text">Communication</div>
+			</div>
+			<div class="radial-bar">
+				<svg x="0px" y="0px" viewBox="0 0 200 200">
+					<circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+					<circle class="path path-3" cx="100" cy="100" r="80"></circle>
+				</svg>
+				<div class="percentage">75%</div>
+				<div class="text">Problem Solving</div>
+			</div>
+			<div class="radial-bar">
+				<svg x="0px" y="0px" viewBox="0 0 200 200">
+					<circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+					<circle class="path path-4" cx="100" cy="100" r="80"></circle>
+				</svg>
+				<div class="percentage">85%</div>
+				<div class="text">Team Work</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+    <br><br>
+
+    <section class="portfolio reveal">
+        <div class="p-container">
+            <h1 class="sub-title">My <span>Work</span></h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="{% static 'images/portfolio/work-3.png' %}" alt="Social Media App">
+                    <div class="layer">
+                        <h3>E-commerce Web-App</h3>
+                        <p>A platform that allows businesses to sell products and services online, providing features such as product listings, shopping carts, and secure payment processing.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{% static 'images/portfolio/work-2.png' %}" alt="Music App">
+                    <div class="layer">
+                        <h3>Freelancing Website</h3>
+                        <p>A digital marketplace where freelancers can connect with clients, bid on projects, and manage their freelance work and contracts.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{% static 'images/portfolio/work-1.png' %}" alt="Online Shopping App">
+                    <div class="layer">
+                        <h3>Survey Web App</h3>
+                        <p>An application designed to create, distribute, and analyze surveys, offering customizable templates and real-time data analytics to gather and interpret user feedback.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <a href="{% url 'explore' %}" class="btn-box">See More</a>
+        </div>
+    </section>
+
+
+    <section class="contact-us reveal" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 left-form">
+                    <form id="contact" action="" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="form_type" value="contact">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-heading">
+                                    <h2>Don't be Hesitated<br><em>Talk to us</em> now!</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">                 
+                                <input name="name" type="text" id="name" placeholder="First Name*" required="">               
+                            </div>
+                            <div class="col-lg-6">                
+                                <input name="last-name" type="text" id="last-name" placeholder="Last Name*" required="">                           
+                            </div>
+                            <div class="col-lg-6">                       
+                                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">                        
+                            </div>
+                            <div class="col-lg-6">                         
+                                <input name="subject" type="text" id="subject" placeholder="Subject*" required="">                        
+                            </div>
+                            <div class="col-lg-12">                           
+                                <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>                          
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" id="form-submit" class="main-button ">Send Message</button>                            
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="about-widget">
+                        <div class="about-widget-header">
+                            <i class='bx bx-code-alt' style='color:#1DEDB9'></i>
+                            <h3>Developer</h3>
+                        </div>
+                        <p>Crafting Digital Dreams Into Reality. Specializing in transforming innovative ideas into dynamic and user-friendly web solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="location-widget">
+                        <h4>Our Location</h4>
+                        <p>Westlands, Muthithi Road, <br>Nairobi, Kenya</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="customer-care">
+                        <h4>Customer Care</h4>
+                        <ul class="info">
+                            <li><a href="tel:+254114926337">+254 114 926 337</a></li>
+                            <li><a href="mailto:wendyachieng98@gmail.com">wendyachieng98@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="follow-us">
+                        <h4>Follow Us</h4>
+                        <ul class="social-links">
+                            <li><a href="https://www.linkedin.com/in/wendy-mudenyo-7b70b9132/" target="_blank"><i class="bi bi-linkedin"></i> Linkedin</a></li>
+                            <li>
+                              <p>Click Below to Download CV</p>
+                            <button id="downloadBtn" class="download-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" class="svgIcon">
+                                <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+                                </svg>
+                                <span class="icon2"></span>
+                            </button>                              
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sub-footer">
+                        <p>&copy; 2024 Wendy Mudenyo. All rights reserved. | Professional Software Development & Web Design</p>
+                        <a href="#top" class="scroll-to-top">Go to Top <i class="bi bi-arrow-bar-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+        
+          <!-- Scripts -->
+          <!-- Bootstrap core JavaScript -->
+          <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+          <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+        
+          <script src="{% static 'js/isotope.min.js' %}"></script>
+          <script src="{% static 'js/owl-carousel.js' %}"></script>
+        
+          <script src="{% static 'js/tabs.js' %}"></script>
+          <script src="{% static 'js/popup.js' %}"></script>
+          <script src="{% static 'js/custom.js' %}"></script>
+        
+          <script src="{% static 'js/main.js' %}"></script>
+          <script>
+            setTimeout(function(){
+                $('.loader').fadeToggle();
+            }, 1500);
+          
+            $("a[href='#top']").click(function() {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+            window.addEventListener("scroll", function () {
+              const header = document.querySelector(".header");
+              if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+              } else {
+                header.classList.remove("scrolled");
+              }
+            });
+          </script>
+          <script>
+            
+
+
+            // Get the download button element
+            const downloadBtn = document.getElementById('downloadBtn');
+
+            // Construct the file URL relative to the web server's root directory
+            const fileUrl = '/static/cv/CurriculumVitae.pdf';
+
+            // Add a click event listener to the button
+            downloadBtn.addEventListener('click', () => {
+            // Create a temporary anchor element
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'CurriculumVitae.pdf'; // Set the desired file name
+
+            // Append the anchor to the document
+            document.body.appendChild(link);
+
+            // Trigger the download by simulating a click on the anchor
+            link.click();
+
+            // Remove the anchor from the document
+            document.body.removeChild(link);
+            });
+          </script>
+        </body>
+        </html>

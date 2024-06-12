@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Services | Wendy{% endblock %}
+{% block content %}
+
+        <div class="services-banner custom-banner">
+            <div class="custom-container">
+                <div class="custom-row">
+                    <div class="custom-col-lg-6 custom-offset-lg-3">
+                        <div class="custom-header-text">
+                            <h2>Our <span>Services</span></h2>
+                            <p>Transforming your digital dreams into reality.<br><strong>Unleash your business potential</strong> with our cutting-edge web solutions.</p>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <section id="services" class="services-section">
+            <div class="wrapper">
+              <h2 class="section-title">What We Offer</h2>
+              <div class="service-grid">
+                <div class="service-card">
+                  <div class="service-icon">
+                    <img src="{% static 'images/services/front.jpg' %}" alt="Front-End Development">
+                  </div>
+                  <h3 class="service-title">Front-End Development</h3>
+                  <p class="service-description">Bringing your vision to life with interactive, sleek, and dynamic user interfaces. We ensure a seamless user experience across all devices using the latest web technologies.</p>
+                </div>
+                <div class="service-card">
+                  <div class="service-icon">
+                    <img src="{% static 'images/services/back.jpg' %}" alt="Back-End Development">
+                  </div>
+                  <h3 class="service-title">Back-End Development</h3>
+                  <p class="service-description">Engineering the backbone of your digital presence with scalable and efficient server-side solutions. Our back-end development guarantees robust performance and secure data management.</p>
+                </div>
+                <div class="service-card">
+                  <div class="service-icon">
+                    <img src="{% static 'images/services/full.jpg' %}" alt="Full-Stack Development">
+                  </div>
+                  <h3 class="service-title">Full-Stack Development</h3>
+                  <p class="service-description">Delivering comprehensive web solutions from initial concept to final deployment, all under one roof. We seamlessly integrate front-end and back-end technologies to create a cohesive and efficient application.</p>
+                </div>
+                <div class="service-card">
+                  <div class="service-icon">
+                    <img src="{% static 'images/services/web.jpg' %}" alt="Web Design">
+                  </div>
+                  <h3 class="service-title">Web Design</h3>
+                  <p class="service-description">Designing visually captivating and user-centric websites that reflect your brand’s identity. Our designs focus on both aesthetics and usability to ensure an engaging user experience.</p>
+                </div>
+                <div class="service-card">
+                  <div class="service-icon">
+                    <img src="{% static 'images/services/api.jpg' %}" alt="API Development">
+                  </div>
+                  <h3 class="service-title">API Development</h3>
+                  <p class="service-description">Creating seamless integrations and extending functionality through robust API solutions. Our APIs enhance connectivity and ensure smooth data exchange between different systems.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br><br>
+
+          <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-row align-items-center">
+                    <div class="cta-col-lg-8">
+                        <h2>Hire us to Work on a Project?</h2>
+                    </div>
+                    <div class="cta-col-lg-4">
+                        <div class="cta-button">
+                            <a href="{% url 'contact' %}">Contact Us Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            
+
+            {% endblock %}

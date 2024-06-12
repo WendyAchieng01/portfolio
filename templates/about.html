@@ -1,0 +1,423 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>About | Wendy</title>
+
+    <link rel="icon" href="#" type="{% static 'images/favicon/w.png">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon/w.jpg' %}">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+
+    <body>
+
+        <div class="loader">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="34px" height="40px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+            </rect>
+            <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+            </rect>
+            <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+              <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+              <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+            </rect>
+          </svg>
+        </div>
+      
+        <header class="header" id="#top">
+            <div class="logo">
+                <img src="{% static 'images/logo/coding.png' %}" alt="Logo"> Developer
+            </div>
+
+            <nav class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About Us</a>
+                <a href="{% url 'services' %}">My Services</a>
+                <a href="{% url 'explore' %}">Explore Work</a>
+                <a href="{% url 'contact' %}">Contact Us</a>
+            </nav>
+        </header>
+
+
+        <div class="page-banner change-name">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="header-text">
+                            <h2><em>About</em> Designer</h2>
+                            <p>Step into the realm of <strong>Wendy Mudenyo</strong>, a digital artisan who, with over 7 years of expertise, has mastered the art of transforming pixels into captivating, user-centric web experiences that transcend mere functionality. Her portfolio is a testament to her unwavering passion for crafting harmonious blends of aesthetics, intuition, and cutting-edge technologies, meticulously woven together to elevate online narratives and resonate with audiences on a profound level.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="service-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="62" viewBox="0 0 24 24" width="62"><g><rect fill="none" height="24" width="24"/></g><g><g><path class="icon" d="M21,12.22C21,6.73,16.74,3,12,3c-4.69,0-9,3.65-9,9.28C2.4,12.62,2,13.26,2,14v2c0,1.1,0.9,2,2,2h1v-6.1 c0-3.87,3.13-7,7-7s7,3.13,7,7V19h-8v2h8c1.1,0,2-0.9,2-2v-1.22c0.59-0.31,1-0.92,1-1.64v-2.3C22,13.14,21.59,12.53,21,12.22z"/><circle class="icon" cx="9" cy="13" r="1"/><circle class="icon" cx="15" cy="13" r="1"/><path class="icon" d="M18,11.03C17.52,8.18,15.04,6,12.05,6c-3.03,0-6.29,2.51-6.03,6.45c2.47-1.01,4.33-3.21,4.86-5.89 C12.19,9.19,14.88,11,18,11.03z"/></g></g></svg>
+                            <h4>Active Support 24/7</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="service-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="62" viewBox="0 0 24 24" width="62"><path d="M0 0h24v24H0z" fill="none"/><path class="icon" d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z"/></svg>
+                            <h4>Customer Care</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="service-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="62" viewBox="0 0 24 24" width="62"><path d="M0 0h24v24H0z" fill="none"/><path class="icon" d="M8 11.5c0-.83-.67-1.5-1.5-1.5S5 10.67 5 11.5 5.67 13 6.5 13 8 12.33 8 11.5zm7-5c0-.83-.67-1.5-1.5-1.5h-3C9.67 5 9 5.67 9 6.5S9.67 8 10.5 8h3c.83 0 1.5-.67 1.5-1.5zM8.5 15c-.83 0-1.5.67-1.5 1.5S7.67 18 8.5 18s1.5-.67 1.5-1.5S9.33 15 8.5 15zM12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9zm5.5-11c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-2 5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+                            <h4>Easy to Customize</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="interior-design">
+            <div class="container expanded">
+                <div class="right-content">
+                    <p>Embarking from KCA University with a degree in Software Development, I've journeyed through diverse roles and projects, cultivating expertise in both front-end and back-end development, as well as UI/UX design and project management.</p>
+        
+                    <div class="accordion" id="accordionExample">
+                        <h4>Discover What I Offer</h4>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Custom Web Development
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Crafting bespoke websites and web applications that seamlessly blend creativity with functionality, tailored precisely to your unique vision and requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    E-commerce Solutions
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Empowering businesses with robust e-commerce platforms, meticulously designed to elevate online shopping experiences for your customers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    UI/UX Design
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Driven by a passion for user-centric design, I ensure your digital presence is not only visually captivating but also intuitively navigable, delivering delightful user experiences.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Ongoing Support and Maintenance
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Committed to your success, I provide continuous support and maintenance services, ensuring your digital assets remain secure, up-to-date, and optimized for peak performance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-image">
+                    <h3>My Skillset</h3>
+                    <div class="flex-container">
+                        <div class="flex-row">
+                            <div class="flex-box"><i class="fa-brands fa-html5 fa-3x"></i></div>
+                            <div class="flex-box"><i class="fa-brands fa-css3 fa-3x"></i></div>
+                            <div class="flex-box"><i class="fa-brands fa-bootstrap fa-3x"></i></div>
+                            <div class="flex-box"><i class="devicon-django-plain fa-3x"></i></div>
+                        </div>
+                        <div class="flex-row">
+                            <div class="flex-box"><i class="fa-brands fa-js fa-3x"></i></div>
+                            <div class="flex-box"><i class="devicon-json-plain fa-3x"></i></div>
+                            <div class="flex-box"><i class="fa-brands fa-python fa-3x"></i></div>
+                            <div class="flex-box"><i class="fa-brands fa-github fa-3x"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <section class="what-they-say">
+            <div class="container expanded">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="testimonials">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                <div class="owl-what-they-say owl-carousel">
+                                    <div class="item testimonial-item">
+                                        <img class="float-start" src="{% static 'images/' %}" alt="">
+                                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-chat-quote" viewBox="0 0 16 16">
+                                        <path class="icon" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                                        <path class="icon" d="M7.066 6.76A1.665 1.665 0 0 0 4 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
+                                        </svg></div>
+                                        <h4>John Patrick</h4>
+                                        <span>CEO of Tech Solutions Inc.</span>
+                                        <ul>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                        </ul>
+                                        <p>"Working with Wendy has been a game-changer for our business. The custom web application she developed has significantly improved our operational efficiency and customer satisfaction. The attention to detail and commitment to excellence are truly commendable. We look forward to collaborating on future projects!"</p>
+                                    </div>
+                                    
+                                    <div class="item testimonial-item">
+                                        <img class="float-start" src="{% static 'images/' %}" alt="">
+                                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-chat-quote" viewBox="0 0 16 16">
+                                        <path class="icon" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                                        <path class="icon" d="M7.066 6.76A1.665 1.665 0 0 0 4 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
+                                        </svg></div>
+                                        <h4>Lisa Brown</h4>
+                                        <span>Marketing Director, Web Innovators LLC</span>
+                                        <ul>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                        </ul>
+                                        <p>"We couldn't be happier with the website redesign provided by Wendy. The new design is not only visually stunning but also highly functional and user-friendly. She was professional, reliable, and always responsive to our needs. We highly recommend Wendy for any web development projects."</p>
+                                    </div>
+                                    
+                                    <div class="item testimonial-item">
+                                        <img class="float-start" src="{% static 'images/' %}" alt="">
+                                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-chat-quote" viewBox="0 0 16 16">
+                                        <path class="icon" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                                        <path class="icon" d="M7.066 6.76A1.665 1.665 0 0 0 4 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
+                                        </svg></div>
+                                        <h4>Sarah Makena</h4>
+                                        <span>CTO, Digital Horizons Ltd.</span>
+                                        <ul>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'  ></i></li>
+                                        </ul>
+                                        <p>"We approached Wendy with a complex web application project, and the results were nothing short of amazing. The innovative solutions and ongoing support provided by her have been invaluable to our business. The professionalism and expertise displayed throughout the project were impressive."</p>
+                                    </div>
+
+                                    <div class="item testimonial-item">
+                                        <img class="float-start" src="{% static 'images/' %}" alt="">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-chat-quote" viewBox="0 0 16 16">
+                                                <path class="icon" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                                                <path class="icon" d="M7.066 6.76A1.665 1.665 0 0 0 4 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 7.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 0 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
+                                            </svg>
+                                        </div>
+                                        <h4>Carl Wafula</h4>
+                                        <span>Founder, Digital Solutions Co.</span>
+                                        <ul>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'></i></li>
+                                            <li><i class='bx bxs-star' style='color:#1DEDB9'></i></li>
+                                        </ul>
+                                        <p>"Wendy's expertise and dedication have been invaluable to our project. She delivered a stunning website that perfectly encapsulates our brand identity and vision. Her professionalism and attention to detail have truly set her apart. We're thrilled with the results and highly recommend her services."</p>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-row align-items-center">
+                    <div class="cta-col-lg-8">
+                        <h2>Hire us to Work on a Project?</h2>
+                    </div>
+                    <div class="cta-col-lg-4">
+                        <div class="cta-button">
+                            <a href="#">Contact Us Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+          
+
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="about-widget">
+                            <div class="about-widget-header">
+                                <i class='bx bx-code-alt' style='color:#1DEDB9'></i>
+                                <h3>Developer</h3>
+                            </div>
+                            <p>Crafting Digital Dreams Into Reality. Specializing in transforming innovative ideas into dynamic and user-friendly web solutions.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="location-widget">
+                            <h4>Our Location</h4>
+                            <p>Westlands, Muthithi Road, <br>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="customer-care">
+                            <h4>Customer Care</h4>
+                            <ul class="info">
+                                <li><a href="tel:+254114926337">+254 114 926 337</a></li>
+                                <li><a href="mailto:wendyachieng98@gmail.com">wendyachieng98@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="follow-us">
+                            <h4>Follow Us</h4>
+                            <ul class="social-links">
+                                <li><a href="https://www.linkedin.com/in/wendy-mudenyo-7b70b9132/" target="_blank"><i class="bi bi-linkedin"></i> Linkedin</a></li>
+                                <li>
+                                  <p>Click Below to Download CV</p>
+                                    <button id="downloadBtn" class="download-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" class="svgIcon">
+                                        <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+                                        </svg>
+                                        <span class="icon2"></span>
+                                    </button>                              
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sub-footer">
+                            <p>&copy; 2024 Wendy Mudenyo. All rights reserved. | Professional Software Development & Web Design</p>
+                            <a href="#top" class="scroll-to-top">Go to Top <i class="bi bi-arrow-bar-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+            
+              <!-- Scripts -->
+              <!-- Bootstrap core JavaScript -->
+              <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+              <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+            
+              <script src="{% static 'js/isotope.min.js' %}"></script>
+              <script src="{% static 'js/owl-carousel.js' %}"></script>
+            
+              <script src="{% static 'js/tabs.js' %}"></script>
+              <script src="{% static 'js/popup.js' %}"></script>
+              <script src="{% static 'js/custom.js' %}"></script>
+            
+              <script src="{% static 'js/main.js' %}"></script>
+              <script>
+                setTimeout(function(){
+                    $('.loader').fadeToggle();
+                }, 1500);
+                
+                  $("a[href='#top']").click(function() {
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
+                    return false;
+                });
+                    
+                $('.owl-what-they-say').owlCarousel({
+                  items:2,
+                  loop:true,
+                  dots: false,
+                  nav: false,
+                  autoplay: true,
+                  margin:30,
+                    responsive:{
+                      0:{
+                        items:1
+                      },
+                      767:{
+                        items:1
+                      },
+                      1200:{
+                        items:2
+                      },
+                      1600:{
+                        items:2
+                      }
+                    }
+                })
+
+                // Get the download button element
+                const downloadBtn = document.getElementById('downloadBtn');
+
+                // Construct the file URL relative to the web server's root directory
+                const fileUrl = '/static/cv/CurriculumVitae.pdf';
+
+                // Add a click event listener to the button
+                downloadBtn.addEventListener('click', () => {
+                // Create a temporary anchor element
+                const link = document.createElement('a');
+                link.href = fileUrl;
+                link.download = 'CurriculumVitae.pdf'; // Set the desired file name
+
+                // Append the anchor to the document
+                document.body.appendChild(link);
+
+                // Trigger the download by simulating a click on the anchor
+                link.click();
+
+                // Remove the anchor from the document
+                document.body.removeChild(link);
+                });
+              </script>
+
+            
+            </body>
+            </html>
