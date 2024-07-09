@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+
+
+    <div class="contact-banner updated-contact-banner">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="header-text text-center">
+                        <h2>Contact Us</h2>
+                        <p>We'd love to hear from you! Whether you have a question about our services, pricing, need a demo, or anything else, we are ready to answer all your questions. Reach out to us and let's start a conversation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+     <!-- Contact Start -->
+     <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <hr class="w-100">
+                    <p class="mb-2">Call me:</p>
+                    <h3 class="fw-bold">+254 114 926 337</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">wendyachieng98@gmail.com</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Follow me:</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/wendy-mudenyo-7b70b9132/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+
+    {% endblock %}

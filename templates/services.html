@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Services{% endblock %}
+{% block content %}
+
+
+    <div class="services-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="header-text text-center custom-header-text">
+                        <h1 class="display-5 mb-3">OUR SERVICES</h1>
+                        <p>Transforming your digital dreams into reality. <br><strong>Unleash your business potential</strong> with our cutting-edge web solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <section id="services" class="services-section">
+    <div class="container">
+            <h2 class="section-title text-center mb-5">What We Offer</h2>
+        <div class="row service-grid">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="{% static 'img/services/front.jpg' %}" alt="Front-End Development">
+                    </div>
+                    <h3 class="service-title">Front-End Development</h3>
+                    <p class="service-description">Bringing your vision to life with interactive, sleek, and dynamic user interfaces. We ensure a seamless user experience across all devices using the latest web technologies.</p>
+                </div>
+            </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="{% static 'img/services/back.jpg' %}" alt="Back-End Development">
+                        </div>
+                        <h3 class="service-title">Back-End Development</h3>
+                        <p class="service-description">Engineering the backbone of your digital presence with scalable and efficient server-side solutions. Our back-end development guarantees robust performance and secure data management.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="{% static 'img/services/full.jpg' %}" alt="Full-Stack Development">
+                        </div>
+                        <h3 class="service-title">Full-Stack Development</h3>
+                        <p class="service-description">Delivering comprehensive web solutions from initial concept to final deployment, all under one roof. We seamlessly integrate front-end and back-end technologies to create a cohesive and efficient application.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="{% static 'img/services/web.jpg' %}" alt="Web Design">
+                        </div>
+                        <h3 class="service-title">Web Design</h3>
+                        <p class="service-description">Designing visually captivating and user-centric websites that reflect your brand’s identity. Our designs focus on both aesthetics and usability to ensure an engaging user experience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="{% static 'img/services/api.jpg' %}" alt="API Development">
+                        </div>
+                        <h3 class="service-title">API Development</h3>
+                        <p class="service-description">Creating seamless integrations and extending functionality through robust API solutions. Our APIs enhance connectivity and ensure smooth data exchange between different systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    {% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Explore{% endblock %}
+{% block content %}
+
+
+    <div class="explore-page-banner change-name">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="explore-header-text">
+                        <h2>Explore Our Work</h2>
+                        <p>Embark on a journey through my curated portfolio, where innovation meets artistry. Discover a tapestry of digital experiences that push boundaries and captivate audiences. Let our work be your guide to the realms of possibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h1 class="section-title text-center">My Previous Projects</h1>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'img/project/work-1.png' %}" alt="Roren Auto Spares">
+                        <div class="project-overlay">
+                            <a href="https://example.com/roren-auto-spares" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Roren Auto Spares</h3>
+                        <p class="project-description">E-commerce store for high-quality auto parts with user-friendly interface and secure payment gateways.</p>
+                        <div class="project-tags">
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Web Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'img/project/work-2.png' %}" alt="Survey Questionnaire Web App">
+                        <div class="project-overlay">
+                            <a href="https://example.com/survey-app" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Survey Questionnaire Web App</h3>
+                        <p class="project-description">Create, distribute, and analyze surveys with customizable templates and real-time data analytics.</p>
+                        <div class="project-tags">
+                            <span class="tag">Web App</span>
+                            <span class="tag">Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'img/project/work-3.png' %}" alt="Nill Tech Solutions">
+                        <div class="project-overlay">
+                            <a href="https://example.com/nill-tech-solutions" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Nill Tech Solutions</h3>
+                        <p class="project-description">Freelancing platform connecting professionals with clients across various industries.</p>
+                        <div class="project-tags">
+                            <span class="tag">Platform</span>
+                            <span class="tag">Freelancing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   {% endblock %}
