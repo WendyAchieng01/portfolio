@@ -5,6 +5,8 @@
 {% block content %}
 
 
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
     <div class="about-page-banner about-section">
         <div class="container">
             <div class="row justify-content-center">
@@ -109,7 +111,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-primary mt-3">Explore My Work</a>
+                        <a href="{% url 'explore' %}" class="btn btn-outline-white mt-3">Explore My Work</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -120,7 +122,6 @@
             </div>
         </div>
     </section>
-    <br><br>
 
     <section class="skillset-section">
         <div class="container text-center">

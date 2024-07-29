@@ -8,24 +8,29 @@
     <!-- Header Start -->
     <div class="container-fluid bg-light my-6 mt-0" id="home">
         <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-            <h3 class="text-primary mb-3" >I'm</h3>
-                    <h1 class="display-3 mb-3">Wendy Mudenyo</h1>
-                    <h2 class="typed-text-output d-inline" id="text2"></h2>
-                    <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
-                    <div class="d-flex align-items-center pt-5">
-                        <a href="" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-            <img class="img-fluid" src="{% static 'img/profile2.png' %}" alt="" style="max-width: 100%; height: 700px; width: 600px;">
+            <div class="py-6 pb-0 pt-lg-0" style="max-width: 50%;">
+                <h3 class="intro-text mb-3">Hello, I'm</h3>
+                <h1 class="name-text display-3 mb-3">Wendy Mudenyo</h1>
+                <h2 class="profession-text typed-text-output d-inline" id="text2"></h2>
+                <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+                <div class="d-flex align-items-center pt-5">
+                    <a href="" class="cv-button btn py-3 px-4 me-5">Download My CV</a>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- Header End -->
 
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
 
     <!-- About Start -->
     <div class="container-xxl py-6" id="about">
@@ -40,7 +45,7 @@
                         <h3 class="lh-base mb-0">of working experience as a web designer & developer</h3>
                     </div>
                     <p class="mb-4">I have extensive experience in web design and development, delivering high-quality solutions that meet client needs and exceed expectations.</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Affordable Prices</p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
                     <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
@@ -212,7 +217,7 @@
         <div class="container">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0" style="width: 400px;">My Services</h1>
+                    <h1 class="display-5 mb-0" >My Services</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
                     <a class="btn btn-primary py-3 px-5" href="">Hire Me</a>
@@ -273,81 +278,6 @@
     
     <!-- Service End -->
 
-
-    <!-- Projects Start -->
-    <div class="container-xxl py-6 pt-5" id="project">
-        <div class="container">
-            <div class="row g-5 mb-5 align-items-center wow fadeInUp" style="width: 1200px" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Projects</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
-                        <li class="mx-3 active" data-filter="*">All Projects</li>
-                        <li class="mx-3" data-filter=".first">UI/UX Design</li>
-                        <li class="mx-3" data-filter=".second">Graphic Design</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="{% static 'img/project-1.jpg' %}" alt="proj1">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-1.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="{% static 'img/project-2.jpg' %}" alt="proj2">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-2.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="{% static 'img/project-3.jpg' %}" alt="proj3">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-3.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="{% static 'img/project-4.jpg' %}" alt="proj4">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-4.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="{% static 'img/project-5.jpg' %}" alt="proj5">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-5.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="{% static 'img/project-6.jpg' %}" alt="proj6">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-6.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Projects End -->
 
 
     <!-- Testimonial Start -->
@@ -417,65 +347,39 @@
 
 
     <!-- Contact Start -->
-    <div class="container-xxl pb-5" id="contact">
-        <div class="container py-5">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0" style="width: 700px;">Let's Work Together</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
-                </div>
+    <div class="contact-form-container">
+        <h2>Let's Create Something Amazing</h2>
+        <p class="subtitle">Drop me a line and let's start a conversation</p>
+        <form class="contact-form" id="contact-form" method="post" action="{% url 'index' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder=" ">
+                <label for="name">Your Name</label>
+                <span class="focus-border"></span>
             </div>
-            <div class="row g-5">
-                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <hr class="w-100">
-                    <p class="mb-2">Call me:</p>
-                    <h3 class="fw-bold">+254 114 926 337</h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Mail me:</p>
-                    <h3 class="fw-bold">wendyachieng98@gmail.com</h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Follow me:</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/wendy-mudenyo-7b70b9132/"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder=" ">
+                <label for="email">Your Email</label>
+                <span class="focus-border"></span>
             </div>
-        </div>
+            <div class="form-group">
+                <input type="text" id="subject" name="subject" required placeholder=" ">
+                <label for="subject">Subject</label>
+                <span class="focus-border"></span>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                <label for="message">Message</label>
+                <span class="focus-border"></span>
+            </div>
+            <button type="submit" class="btn-submit">
+                <span>Send Message</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </form>
     </div>
     <!-- Contact End -->
 

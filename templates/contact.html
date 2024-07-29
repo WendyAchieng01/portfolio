@@ -10,15 +10,23 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="header-text text-center">
-                        <h2>Contact Us</h2>
-                        <p>We'd love to hear from you! Whether you have a question about our services, pricing, need a demo, or anything else, we are ready to answer all your questions. Reach out to us and let's start a conversation.</p>
+                        <h2>Contact Me</h2>
+                        <p>I'd love to hear from you! Whether you have a question about my services, pricing, need a demo, or anything else, I am ready to answer all your questions. Reach out to me and let's start a conversation.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
 
      <!-- Contact Start -->
      <div class="container-xxl pb-5" id="contact">
@@ -37,30 +45,32 @@
                         <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/wendy-mudenyo-7b70b9132/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                <div class="col-lg-7 col-md-6" data-wow-delay="0.5s">
+                    {% csrf_token %}
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
@@ -75,6 +85,13 @@
     </div>
     <!-- Contact End -->
 
-
+    <script>
+        // Auto close alerts
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 4000);
+    </script>
 
     {% endblock %}

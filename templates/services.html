@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="header-text text-center custom-header-text">
-                        <h1 class="display-5 mb-3">OUR SERVICES</h1>
+                        <h1 class="display-5 mb-3">SERVICES OFFERED</h1>
                         <p>Transforming your digital dreams into reality. <br><strong>Unleash your business potential</strong> with our cutting-edge web solutions.</p>
                     </div>
                 </div>
@@ -18,10 +18,17 @@
         </div>
     </div>
 
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
     
     <section id="services" class="services-section">
     <div class="container">
-            <h2 class="section-title text-center mb-5">What We Offer</h2>
+            <h2 class="section-title text-center mb-5">What I Offer</h2>
         <div class="row service-grid">
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="service-card">
@@ -53,7 +60,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="{% static 'img/services/web.jpg' %}" alt="Web Design">
+                            <img src="{% static 'img/services/web.png' %}" alt="Web Design">
                         </div>
                         <h3 class="service-title">Web Design</h3>
                         <p class="service-description">Designing visually captivating and user-centric websites that reflect your brand’s identity. Our designs focus on both aesthetics and usability to ensure an engaging user experience.</p>
@@ -71,6 +78,67 @@
             </div>
         </div>
     </section>
+
+    <div class="services-container mt-5">
+        <h2>Get a <span class="highlight">Personalized</span> Quotation</h2>
+        <form id="services-quotation-form" method="post" action="">
+            {% csrf_token %}
+            <div class="services-form-row">
+                <div class="services-form-column">
+                    <div class="services-mb-3 input-effect">
+                        <input type="text" class="services-form-control" id="services-name" name="services-name" required>
+                        <label for="services-name" class="services-form-label">Your Name</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="services-mb-3 input-effect">
+                        <select class="services-form-control" id="services-budget" name="services-budget" required>
+                            <option value="" disabled selected>Select a budget range</option>
+                            <option value="Under $500">Under $500</option>
+                            <option value="$500 - $1000">$500 - $1000</option>
+                            <option value="$1000 - $5000">$1000 - $5000</option>
+                            <option value="$5000 - $10000">$5000 - $10000</option>
+                            <option value="Over $10000">Over $10000</option>
+                        </select>
+                        <label for="services-budget" class="services-form-label">Your Budget</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="services-mb-3 input-effect">
+                        <textarea class="services-form-control" id="services-project-description" name="services-project-description" rows="4" required></textarea>
+                        <label for="services-project-description" class="services-form-label">Describe Your Project</label>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+                <div class="services-form-column">
+                    <div class="services-mb-3 input-effect">
+                        <input type="email" class="services-form-control" id="services-email" name="services-email" required>
+                        <label for="services-email" class="services-form-label">Your Email</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="services-mb-3 input-effect">
+                        <select class="services-form-control" id="services-project-category" name="services-project-category" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="App Development">App Development</option>
+                            <option value="E-commerce">E-commerce</option>
+                            <option value="SEO">SEO</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                        </select>
+                        <label for="services-project-category" class="services-form-label">Project Category</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="services-mb-3 input-effect">
+                        <input type="text" class="services-form-control" id="services-estimated-timeline" name="services-estimated-timeline" required>
+                        <label for="services-estimated-timeline" class="services-form-label">Estimated Timeline</label>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="services-btn services-btn-primary">Get My Free Quote</button>
+        </form>
+    </div>
+    
+    
     
 
     {% endblock %}
