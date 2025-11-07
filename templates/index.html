@@ -1,0 +1,159 @@
+﻿
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Index{% endblock %}
+{% block content %}
+	
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<main class="cd-main">
+		
+		<div class="section fullwidth-height">
+	
+			<div class="parallax-home"></div>	
+						
+			<div class="white-over"></div>
+		
+			<div class="hero-top">
+				<div class="container">			
+					<div class="twelve columns">
+						<p class="intro-text">Hi, I'm <span class="highlight">Wendy Achieng</span></p>
+        				<h1>Building elegant and impactful digital experiences</h1>
+						<a href="{% url 'core:index' %}#scroll-link" class="scroll"><div class="link-top chaffle" data-lang="en">Explore</div></a>
+					</div>	
+				</div>	
+			</div>
+				
+		</div>
+		
+		<div class="section padding-top-bottom-small" id="scroll-link">
+	
+			<div class="parallax-1"></div>	
+				
+			<div class="container">			
+				<div class="twelve columns">		
+					<div class="action-wrap">
+						<p class="section-subtitle">About Me</p>
+						<h4>Software Engineer passionate about building scalable apps and seamless user experiences.</h4>
+						<p>
+							I specialize in <strong>Django/Python</strong>, <strong>Data Science</strong>, and <strong>E-Commerce Solutions</strong> — turning complex requirements into elegant, user-friendly applications that deliver value.
+						</p>
+	
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+		<div class="section padding-top white-background">
+			<div class="container">			
+				<div class="twelve columns">		
+					<div class="header-text main-pages">
+						<p>my work</p>
+						<h3>Here are a few of my favorite projects where I combined strategy, design, and code to bring ideas to life.</h3>
+					</div>
+				</div>	
+			</div>
+		</div>
+			
+		<div class="clear"></div>
+		
+		<!-- .cd-gallery -->
+		<ul class="cd-gallery">
+			<li class="cd-item branding web">
+				<a href="{% url 'core:project1' %}">
+					<div class="portfolio-box">
+						<img src="{% static 'images/portfolio/freelance.jpg' %}" alt=""/>
+						<div class="mask"></div>
+						<div class="line"></div>
+						<p>Full-Stack Web Application</p>
+						<h5>Connect Talent with Opportunity</h5>
+					</div>
+				</a>
+			</li>
+			<li class="cd-item photo">
+				<a href="{% url 'core:project2' %}">
+					<div class="portfolio-box">
+						<img src="{% static 'images/portfolio/payroll.jpg' %}" alt=""/>
+						<div class="mask"></div>
+						<div class="line"></div>
+						<p>Healthcare Software Solution</p>
+						<h5>Streamlined Patient Care System</h5>
+					</div>
+				</a>
+			</li>
+			<li class="cd-item motion web">
+				<a href="{% url 'core:project3' %}">
+					<div class="portfolio-box">
+						<img src="{% static 'images/portfolio/spin2.jpg' %}" alt=""/>
+						<div class="mask"></div>
+						<div class="line"></div>
+						<p>Corporate Web Platform</p>
+						<h5>Modern Pharma Digital Presence</h5>
+					</div>
+				</a>
+			</li>
+			<li class="cd-item branding">
+				<a href="{% url 'core:project4' %}">
+					<div class="portfolio-box">
+						<img src="{% static 'images/portfolio/car.jpg' %}" alt=""/>
+						<div class="mask"></div>
+						<div class="line"></div>
+						<p>E-Commerce Platform</p>
+						<h5>Your One-Stop Auto Parts Shop</h5>
+					</div>
+				</a>
+			</li>
+			<li class="cd-item motion web">
+				<a href="{% url 'core:project5' %}">
+					<div class="portfolio-box">
+						<img src="{% static 'images/portfolio/linear2.png' %}" alt=""/>
+						<div class="mask"></div>
+						<div class="line"></div>
+						<p>Predictive Analytics</p>
+						<h5>Smart Data-Driven Insights</h5>
+					</div>
+				</a>
+			</li>
+			<li class="cd-item photo">
+				<a href="{% url 'core:project6' %}">
+					<div class="portfolio-box">
+						<img src="{% static 'images/portfolio/data.jpg' %}" alt=""/>
+						<div class="mask"></div>
+						<div class="line"></div>
+						<p>Business Intelligence</p>
+						<h5>Transform Data into Decisions</h5>
+					</div>
+				</a>
+			</li>
+			<li class="cd-item photo">
+				<a href="{% url 'core:project7' %}">
+					<div class="portfolio-box">
+						<img src="{% static 'images/portfolio/pos2.jpg' %}" alt=""/>
+						<div class="mask"></div>
+						<div class="line"></div>
+						<p>Point of Sale System</p>
+						<h5>Elegant Retail Management</h5>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+			
+		<div class="clear"></div>		
+			
+		<div class="section padding-top-bottom-small black-background">
+			<div class="container">	
+				<div class="twelve columns">			
+					<div class="like-our-proj">	
+						<h5>Like My Creative Work?</h5>
+						<a href="{% url 'core:contact' %}">
+							<span class="chaffle" data-lang="en">contact us</span>
+						</a>
+					</div>	
+				</div>	
+			</div>
+		</div>
+			
+		{% endblock %}

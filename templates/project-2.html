@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Project{% endblock %}
+{% block content %}
+	
+</head>
+<body>
+    <div class="cd-fold-content single-page">   
+        <div class="container padding-top-bottom-small">        
+            <div class="twelve columns">        
+                <div class="header-text">
+                    <p>Healthcare Software Solution, Django & HTML5</p>
+                    <h3>Hospital Management System - Streamlined Patient Care</h3>      
+                </div>      
+            </div>
+            <div class="eight columns"> 
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/2/1.png' %}" alt="Hospital Dashboard"/>
+                </div>   
+            </div>  
+            <div class="four columns">
+                <p>An integrated healthcare management system designed to streamline hospital operations, from patient registration to discharge. Features include electronic health records (EHR), appointment scheduling, billing management, inventory tracking, and staff coordination modules that enhance efficiency and patient care quality.</p>           
+                <div class="project-list">
+                    <p><span>Technology:</span> Django, HTML5, PostgreSQL</p>
+                    <p><span>Duration:</span> 4 months</p>
+                    <p><span>Features:</span> EHR, Billing, Inventory, Reporting</p>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/2/2.png' %}" alt="Patient Records"/>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/2/3.png' %}" alt="Appointment System"/>
+                </div>      
+            </div>  
+            <div class="twelve columns">
+                <p>This comprehensive hospital management solution digitizes and automates critical healthcare workflows, reducing administrative burden and minimizing errors. The system includes role-based access control for doctors, nurses, administrators, and pharmacists, ensuring data security and HIPAA compliance. Advanced features include prescription management, lab test tracking, bed allocation, emergency room coordination, and automated insurance claim processing. The dashboard provides real-time insights into hospital operations, patient flow, and resource utilization. Integration capabilities allow seamless connection with medical devices, laboratory systems, and third-party healthcare providers, creating a unified healthcare ecosystem.</p>        
+            </div>      
+        </div>  
+    </div>
+</body>
+
+{% endblock %}

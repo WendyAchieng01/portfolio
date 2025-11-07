@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Project{% endblock %}
+{% block content %}
+	
+</head>
+<body>
+    <div class="cd-fold-content single-page">   
+        <div class="container padding-top-bottom-small">        
+            <div class="twelve columns">        
+                <div class="header-text">
+                    <p>Predictive Analytics, Machine Learning</p>
+                    <h3>Linear Regression Model - Smart Data-Driven Insights</h3>      
+                </div>      
+            </div>
+            <div class="eight columns"> 
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/5/1.png' %}" alt="Regression Analysis"/>
+                </div>   
+            </div>  
+            <div class="four columns">
+                <p>A sophisticated machine learning solution utilizing linear regression algorithms to predict trends and outcomes based on historical data. This project demonstrates the power of predictive analytics in business decision-making, featuring data preprocessing, model training, validation, and interactive visualization of results.</p>           
+                <div class="project-list">
+                    <p><span>Technology:</span> Python, Scikit-learn, Pandas</p>
+                    <p><span>Duration:</span> 6 weeks</p>
+                    <p><span>Features:</span> Prediction models, Data visualization, R² analysis</p>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/5/2.png' %}" alt="Data Visualization"/>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/5/3.png' %}" alt="Model Performance"/>
+                </div>      
+            </div>  
+            <div class="twelve columns">
+                <p>This machine learning project showcases advanced predictive modeling techniques applied to real-world datasets. The linear regression implementation includes comprehensive data cleaning, feature engineering, and statistical analysis to ensure model accuracy and reliability. Visualization tools present complex relationships in an intuitive format, making insights accessible to non-technical stakeholders. The project includes cross-validation techniques to prevent overfitting, residual analysis to verify assumptions, and confidence intervals for predictions. Performance metrics such as R-squared, Mean Absolute Error, and Root Mean Square Error are calculated and displayed. The solution can be adapted for various applications including sales forecasting, price optimization, demand prediction, and risk assessment, demonstrating the versatility and power of machine learning in modern business intelligence.</p>        
+            </div>      
+        </div>  
+    </div>
+</body>
+
+{% endblock %}

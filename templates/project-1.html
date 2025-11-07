@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Project{% endblock %}
+{% block content %}
+	
+</head>
+<body>
+    <div class="cd-fold-content single-page">   
+        <div class="container padding-top-bottom-small">        
+            <div class="twelve columns">        
+                <div class="header-text">
+                    <p>Full-Stack Web Application, Django & Python</p>
+                    <h3>Freelancing Platform - Connect Talent with Opportunity</h3>      
+                </div>      
+            </div>
+            <div class="eight columns"> 
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/1/1.png' %}" alt="Freelancing Platform Dashboard"/>
+                </div>   
+            </div>  
+            <div class="four columns">
+                <p>A comprehensive freelancing marketplace that bridges the gap between skilled professionals and businesses seeking expertise. This platform features secure payment integration, real-time messaging, project management tools, and an intelligent matching algorithm that connects freelancers with relevant opportunities.</p>           
+                <div class="project-list">
+                    <p><span>Technology:</span> Django, Python, PostgreSQL</p>
+                    <p><span>Duration:</span> 1 year</p>
+                    <p><span>Features:</span> User authentication, Payment gateway, Real-time chat</p>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/1/2.png' %}" alt="Project Dashboard"/>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/1/3.png' %}" alt="User Interface"/>
+                </div>      
+            </div>  
+            <div class="twelve columns">
+                <p>The platform revolutionizes how freelancers and clients interact by providing a seamless, secure environment for collaboration. Key features include an advanced search and filter system, portfolio showcasing, skill verification, milestone-based payments, and dispute resolution mechanisms. The responsive design ensures optimal user experience across all devices, while the robust backend architecture handles high traffic volumes efficiently. Built with scalability in mind, the platform supports multiple payment methods, multi-language support, and comprehensive analytics for both freelancers and clients to track their progress and earnings.</p>        
+            </div>      
+        </div>  
+    </div>
+</body>
+
+{% endblock %}

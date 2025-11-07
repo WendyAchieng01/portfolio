@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Project{% endblock %}
+{% block content %}
+	
+</head>
+<body>
+    <div class="cd-fold-content single-page">   
+        <div class="container padding-top-bottom-small">        
+            <div class="twelve columns">        
+                <div class="header-text">
+                    <p>E-Commerce Platform, Django Framework</p>
+                    <h3>Autospares Website - Your One-Stop Auto Parts Shop</h3>      
+                </div>      
+            </div>
+            <div class="eight columns"> 
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/4/1.png' %}" alt="Autospares Platform"/>
+                </div>   
+            </div>  
+            <div class="four columns">
+                <p>A dynamic e-commerce platform specializing in automotive parts and accessories. Features advanced search by vehicle make/model/year, detailed product specifications with compatibility information, secure checkout process, and inventory management system that ensures accurate stock levels and timely delivery.</p>           
+                <div class="project-list">
+                    <p><span>Technology:</span> Django, PostgreSQL, Paystack API</p>
+                    <p><span>Duration:</span> 3 months</p>
+                    <p><span>Features:</span> Vehicle search, Shopping cart, Order tracking</p>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/4/2.png' %}" alt="Product Search"/>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/4/3.png' %}" alt="Shopping Interface"/>
+                </div>      
+            </div>  
+            <div class="twelve columns">
+                <p>This comprehensive automotive e-commerce solution transforms the car parts shopping experience with intelligent search functionality and detailed product information. Customers can easily find compatible parts using their vehicle's VIN, make, model, or year. The platform features high-quality product images, installation guides, and customer reviews to aid purchasing decisions. The backend includes a sophisticated inventory management system that syncs with suppliers, automated reorder alerts, and comprehensive sales analytics. Additional features include wish lists, comparison tools, warranty tracking, and a loyalty rewards program. The mobile-responsive design ensures customers can shop conveniently from any device, while multiple payment gateways and shipping options provide flexibility and convenience.</p>        
+            </div>      
+        </div>  
+    </div>
+</body>
+
+{% endblock %}

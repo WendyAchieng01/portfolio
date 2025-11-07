@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Project{% endblock %}
+{% block content %}
+	
+</head>
+<body>
+    <div class="cd-fold-content single-page">   
+        <div class="container padding-top-bottom-small">        
+            <div class="twelve columns">        
+                <div class="header-text">
+                    <p>Corporate Web Platform, Django Framework</p>
+                    <h3>Pharmaceutical Company Website - Modern Digital Presence</h3>      
+                </div>      
+            </div>
+            <div class="eight columns"> 
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/3/1.png' %}" alt="Pharma Website"/>
+                </div>   
+            </div>  
+            <div class="four columns">
+                <p>A sophisticated corporate website for a leading pharmaceutical company, showcasing their product portfolio, research initiatives, and commitment to healthcare innovation. The platform features an intuitive content management system, product catalog with detailed specifications, and a healthcare professional portal for exclusive resources.</p>           
+                <div class="project-list">
+                    <p><span>Technology:</span> Django, Bootstrap, JavaScript</p>
+                    <p><span>Duration:</span> 4 months</p>
+                    <p><span>Features:</span> CMS, Product catalog, Blog portal</p>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/3/2.png' %}" alt="Product Catalog"/>
+                </div>      
+            </div>  
+            <div class="six columns">       
+                <div class="img-wrap">  
+                    <img src="{% static 'images/portfolio/3/3.png' %}" alt="Research Section"/>
+                </div>      
+            </div>  
+            <div class="twelve columns">
+                <p>The website establishes a strong digital presence for the pharmaceutical company, combining elegant design with functional excellence. Key sections include comprehensive product information with safety data sheets, clinical trial results, and prescribing information for healthcare professionals. The platform includes a news and events section highlighting medical breakthroughs and company milestones, a career portal for recruitment, and an investor relations area. The site is fully responsive, optimized for search engines, and complies with pharmaceutical industry regulations. Interactive elements such as drug interaction checkers, dosage calculators, and educational resources enhance user engagement while maintaining the professional credibility essential in the healthcare industry.</p>        
+            </div>      
+        </div>  
+    </div>
+</body>
+
+{% endblock %}
