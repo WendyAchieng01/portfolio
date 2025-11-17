@@ -51,6 +51,7 @@
 					<div class="clear"></div>
 						
 					<form name="ajax-form" id="ajax-form" action="#" method="post">
+    					{% csrf_token %}
 						<div class="six columns" data-scroll-reveal="enter bottom move 100px over 0.4s after 0.2s">
 							<label for="name"> 
 								<span class="error" id="err-name">please enter name</span>
@@ -78,7 +79,11 @@
 					</form>	
 						
 					<div class="clear"></div>
-					<div id="ajaxsuccess">Successfully sent!!</div>
+					{% if success %}
+						<div class="alert alert-success" style="text-align:center; margin-top:20px;">
+							Your message has been sent successfully!
+						</div>
+					{% endif %}
 					<div class="clear"></div>	
 			</div>	
 		</div>
